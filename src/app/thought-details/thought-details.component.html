@@ -1,0 +1,21 @@
+<ng-container>
+    <h2>{{Thepost.title}}</h2>
+     {{Thepost.thought}}
+     <button (click)="edit()">Edit</button> 
+     <button (click)="delete()">Delete</button>
+     <br>
+</ng-container>
+
+<ng-container *ngIf="editPost">
+
+    <input type="text" [(ngModel)]="changeTitle"><br>
+    <input type="text" [(ngModel)]="changeThought"><br>
+
+    <button (click)="saveChanges()">Save</button>
+    <button (click)="cancelChanges()">Cancel</button>
+
+
+</ng-container>
+
+
+
